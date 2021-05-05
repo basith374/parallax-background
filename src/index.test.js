@@ -1,7 +1,7 @@
-import { Example } from '.'
+import { Parallax } from '.'
 
-describe('Example', () => {
+describe('Parallax', () => {
   it('is truthy', () => {
-    expect(Example).toBeTruthy()
+    expect(Parallax).toBeTruthy()
   })
 })
