@@ -15,12 +15,12 @@ npm install --save parallax-background
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'parallax-background'
+import Parallax from 'parallax-background'
 import 'parallax-background/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Parallax />
   }
 }
 ```
