@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save parallax-background
+npm install --save @basith374/parallax-background
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save parallax-background
 ```jsx
 import React, { Component } from 'react'
 
-import Parallax from 'parallax-background'
-import 'parallax-background/dist/index.css'
+import Parallax from '@basith374/parallax-background'
+import '@basith374/parallax-background/dist/index.css'
 
 class Example extends Component {
   render() {
