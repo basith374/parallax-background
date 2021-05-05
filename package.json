@@ -1,6 +1,6 @@
 {
   "name": "@basith374/parallax-background",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An interactive parallax image component",
   "keywords": ["react", "component", "image"],
   "author": "basith374",
