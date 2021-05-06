@@ -2,22 +2,38 @@ name: build
 
 on:
   push:
-    branches: [ master ]
+    branches:
+    - master
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
           
-      - run: yarn
-      - run: yarn test
-      - run: yarn publish
+      - name: Publish
+        run: |
+          yarn
+          yarn test
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.npm_token }}
+
+      - name: Deploy
+        run: |
+          cd example
+          yarn
+          yarn build
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'ap-south-1'
+          SOURCE_DIR: 'build'
