@@ -16,10 +16,10 @@ jobs:
           node-version: 12
           
       - run: |
-        yarn
-        cd example
-        yarn
-        yarn build
+          yarn
+          cd example
+          yarn
+          yarn build
 
       - uses: jakejarvis/s3-sync-action@master
         with:
