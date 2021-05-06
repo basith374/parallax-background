@@ -26,7 +26,7 @@ export const Parallax = ({ images }) => {
       const el = refs.current[i]
       // * 10 fixes floating issue
       // + 1 inverts order
-      const ratio = STEP * 10 * (i + 1) / 10
+      const ratio = (STEP * 10 * (i + 1)) / 10
       el.style.left = ratio * (left - MARGIN) + 'px'
       el.style.top = ratio * (top - MARGIN) + 'px'
     }
