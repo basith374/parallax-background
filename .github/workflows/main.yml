@@ -15,22 +15,18 @@ jobs:
         with:
           node-version: 12
           
-      - run: |
-          yarn
-          yarn test
+      - run: yarn
+      - run: yarn test
 
-      - name: Publish
-        uses: JS-DevTools/npm-publish@v1
+      - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.npm_token }}
 
-      - run: |
-          cd example
-          yarn
-          yarn build
+      - run: cd example
+      - run: yarn
+      - run: yarn build
 
-      - name: Deploy
-        uses: jakejarvis/s3-sync-action@master
+      - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
