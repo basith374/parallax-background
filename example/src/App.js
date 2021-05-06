@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Parallax } from 'parallax-background'
-import 'parallax-background/dist/index.css'
+import { Parallax } from '@basith374/parallax-background'
+import '@basith374/parallax-background/dist/index.css'
 
 import bg0 from './assets/bg_layer_0.png';
 import bg1 from './assets/bg_layer_1.png';
