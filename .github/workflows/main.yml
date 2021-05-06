@@ -17,7 +17,6 @@ jobs:
           
       - run: yarn
       - run: yarn test
-      - run: pwd
 
       - uses: JS-DevTools/npm-publish@v1
         with:
