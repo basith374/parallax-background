@@ -19,11 +19,14 @@ export const Parallax = ({ images }) => {
   function onMouseMove({ clientX, clientY, target }) {
     const width = target.offsetWidth
     const height = target.offsetHeight
+    // parents dimensions are accurate
     const left = ((clientX - parent.current.offsetLeft) / width) * MARGIN
     const top = ((clientY - parent.current.offsetTop) / height) * MARGIN
-    for (const i in refs.current) {
+    for (let i = 0; i < Object.keys(refs.current).length; i++) {
       const el = refs.current[i]
-      const ratio = 1 - STEP * i
+      // * 10 fixes floating issue
+      // + 1 inverts order
+      const ratio = STEP * 10 * (i + 1) / 10
       el.style.left = ratio * (left - MARGIN) + 'px'
       el.style.top = ratio * (top - MARGIN) + 'px'
     }
