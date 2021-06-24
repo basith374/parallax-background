@@ -2,6 +2,10 @@
 
 > An interactive parallax image component
 
+![preview](http://assets.basithkunimal.com/parallax-background.gif)
+
+Here's a [working demo](http://parallax-background.basithkunimal.com)
+
 [![NPM](https://img.shields.io/npm/v/@basith374/parallax-background.svg)](https://www.npmjs.com/package/parallax-background) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![build](https://github.com/basith374/parallax-background/actions/workflows/main.yml/badge.svg)](https://github.com/basith374/parallax-background/actions/workflows/main.yml)
 
 ## Install
