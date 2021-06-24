@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 const MARGIN = 100
 const STEP = 0.2
 
-export const Parallax = ({ images }) => {
+export default function Parallax({ images }) {
   const refs = useRef({})
   const parent = useRef()
   useEffect(() => {

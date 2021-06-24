@@ -18,12 +18,18 @@ import React, { Component } from 'react'
 import Parallax from '@basith374/parallax-background'
 import '@basith374/parallax-background/dist/index.css'
 
+import bg0 from './assets/bg1.png';
+import bg1 from './assets/bg2.png';
+import bg2 from './assets/bg3.png';
+
 class Example extends Component {
   render() {
-    return <Parallax />
+    return <Parallax images={[bg0, bg1, bg2]} />
   }
 }
 ```
+
+> NOTE: Make sure the parent container has some height since the root container uses `height:100%`
 
 ## License
 
